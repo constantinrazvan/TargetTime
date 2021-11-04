@@ -43,7 +43,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large" weight="semibold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4g4-kv-1vj" kind="show" id="bmh-Ut-QEW"/>
+                                    <segue destination="4g4-kv-1vj" kind="show" destinationCreationSelector="todoViewcontroller:" id="bmh-Ut-QEW"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JZ9-0o-qqm">
@@ -175,7 +175,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MY3-hU-wnp"/>
+        <segue reference="bmh-Ut-QEW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>

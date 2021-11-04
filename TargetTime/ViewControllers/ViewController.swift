@@ -49,21 +49,21 @@ class ViewController: UIViewController {
       
   }
     
-  @IBSegueAction func todoViewcontroller(_ coder: NSCoder) -> TodoViewController? {
-    let vc = TodoViewController(coder: coder)
-    
-    if let indexpath = tableView.indexPathForSelectedRow {
-      let todo = todos[indexpath.row]
-      vc?.todo = todo
+    @IBSegueAction func todoViewcontroller(_ coder: NSCoder) -> TodoViewController? {
+        let vc = TodoViewController(coder: coder)
+        
+        if let indexpath = tableView.indexPathForSelectedRow {
+          let todo = todos[indexpath.row]
+          vc?.todo = todo
+        }
+          
+          vc?.delegate = self
+          vc?.presentationController?.delegate = self
+          vc?.modalPresentationStyle = .overFullScreen
+        
+          return vc
+        }
     }
-      
-      vc?.delegate = self
-      vc?.presentationController?.delegate = self
-      vc?.modalPresentationStyle = .overFullScreen
-    
-      return vc
-    }
-}
 
 extension ViewController: UITableViewDelegate {
   
@@ -96,7 +96,6 @@ extension ViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
     let cell = tableView.dequeueReusableCell(withIdentifier: "checked cell", for: indexPath) as! CheckTableViewCell
     cell.delegate = self
     
