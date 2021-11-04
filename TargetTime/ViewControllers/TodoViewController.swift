@@ -24,9 +24,14 @@ class TodoViewController: UIViewController {
     textfield.text = todo?.title
   }
     
-  @IBAction func save(_ sender: Any) {
-    let todo = Todo(title: textfield.text!)
-    delegate?.todoViewController(self, didSaveTodo: todo)
-  }
+    @IBAction func saveButton(_ sender: Any) {
+        let todo = Todo(title: textfield.text!)
+        delegate?.todoViewController(self, didSaveTodo: todo)
+    }
+    
+//  @IBAction func save(_ sender: Any) {
+//    let todo = Todo(title: textfield.text!)
+//    delegate?.todoViewController(self, didSaveTodo: todo)
+//  }
   
 }

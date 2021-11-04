@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var todo: Todo?
 
     @IBOutlet weak var button: UIButton!
+    
     var todos = [
         Todo(title: "Swipe left to remove"),
         Todo(title: "Swipe right to complete "),
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     
   override func viewDidLoad() {
     super.viewDidLoad()
-      
+      //some code
   }
     
   @IBSegueAction func todoViewcontroller(_ coder: NSCoder) -> TodoViewController? {
@@ -64,10 +65,9 @@ extension ViewController: UITableViewDelegate {
     return UISwipeActionsConfiguration(actions: [action])
   }
   
-  func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-    return .delete
-}
-  
+      func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -103,8 +103,8 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: CheckTableViewCellDelegate {
   func checkTableViewCell(_ cell: CheckTableViewCell, didChagneCheckedState checked: Bool) {
     guard let indexPath = tableView.indexPath(for: cell) else {
-      return
-    }
+            return
+        }
     let todo = todos[indexPath.row]
     let newTodo = Todo(title: todo.title, isComplete: checked)
     
