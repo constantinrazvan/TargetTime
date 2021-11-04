@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
   
@@ -27,7 +28,25 @@ class ViewController: UIViewController {
     
   override func viewDidLoad() {
     super.viewDidLoad()
-      //some code
+      
+      let center = UNUserNotificationCenter.current()
+      
+      center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in }
+      
+      let content = UNMutableNotificationContent()
+      content.title = "TargetTime"
+      content.body = "Did you took your targets today?"
+      
+      let date = Date().addingTimeInterval(5)
+      let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+      
+      let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+      
+      let uuidString = UUID().uuidString
+      let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+      
+      center.add(request) { (error) in }
+      
   }
     
   @IBSegueAction func todoViewcontroller(_ coder: NSCoder) -> TodoViewController? {
