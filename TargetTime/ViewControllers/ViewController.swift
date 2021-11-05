@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         Todo(title: "Swipe left to remove"),
         Todo(title: "Swipe right to complete "),
         Todo(title: "Tap on box to complete"),
-        Todo(title: "Tap on text to edit"),
         Todo(title: "Tap on plus button to add item")
       ]
     

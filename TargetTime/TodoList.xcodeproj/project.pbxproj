@@ -17,6 +17,7 @@
 		2276B8F0246E565200DFA1A0 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276B8EF246E565200DFA1A0 /* Checkbox.swift */; };
 		2276B8F2246E569500DFA1A0 /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276B8F1246E569500DFA1A0 /* CheckTableViewCell.swift */; };
 		2276B8F4246E619500DFA1A0 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276B8F3246E619500DFA1A0 /* TodoViewController.swift */; };
+		2A7B934E2735BBCC002018D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7B934D2735BBCC002018D2 /* GoogleService-Info.plist */; };
 		F855C4CEE9AED0CAB3A3BFAB /* Pods_TodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03696DF3B9CBCA9803E918DF /* Pods_TodoList.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		2276B8F3246E619500DFA1A0 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		2A1EEF442732FEBB00D9A8F4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		2A1EEF462732FEBB00D9A8F4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2A7B934D2735BBCC002018D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71C8027F9B5BE9A214530325 /* Pods-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.release.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.release.xcconfig"; sourceTree = "<group>"; };
 		99D0132C4A02B298B51E0CB7 /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 		2276B8CB246E519B00DFA1A0 = {
 			isa = PBXGroup;
 			children = (
+				2A7B934D2735BBCC002018D2 /* GoogleService-Info.plist */,
 				2A1EEF372732FD2800D9A8F4 /* Application */,
 				2A1EEF382732FD3300D9A8F4 /* ViewControllers */,
 				2A1EEF3B2732FD6A00D9A8F4 /* Cell */,
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2276B8E4246E519C00DFA1A0 /* LaunchScreen.storyboard in Resources */,
+				2A7B934E2735BBCC002018D2 /* GoogleService-Info.plist in Resources */,
 				2276B8E1246E519C00DFA1A0 /* Assets.xcassets in Resources */,
 				2276B8DF246E519B00DFA1A0 /* Main.storyboard in Resources */,
 			);
@@ -367,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -440,11 +444,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 349CPCCFMN;
 				INFOPLIST_FILE = TodoList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.meech-ward.TodoList";
+				PRODUCT_BUNDLE_IDENTIFIER = com.constantinrazvan.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,11 +464,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 349CPCCFMN;
 				INFOPLIST_FILE = TodoList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.meech-ward.TodoList";
+				PRODUCT_BUNDLE_IDENTIFIER = com.constantinrazvan.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
